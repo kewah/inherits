@@ -1,0 +1,14 @@
+{
+  "name": "inherits",
+  "repo": "kewah/inherits",
+  "description": "Easy simple tiny inheritance in JavaScript",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "WTFPL2",
+  "main": "inherits_browser.js",
+  "scripts": [
+    "inherits_browser.js"
+  ]
+}
