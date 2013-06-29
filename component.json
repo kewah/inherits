@@ -2,7 +2,7 @@
   "name": "inherits",
   "repo": "kewah/inherits",
   "description": "Easy simple tiny inheritance in JavaScript",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "keywords": [],
   "dependencies": {},
   "development": {},
