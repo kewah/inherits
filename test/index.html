@@ -1,0 +1,44 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Mocha Spec Runner</title>
+  <link rel="stylesheet" href="mocha.css">
+</head>
+<body>
+  <div id="mocha"></div>
+  <script src="mocha.js"></script>
+  <script>mocha.setup('bdd')</script>
+  <script src="../build/build.js"></script>
+
+  <script>
+    var inherits = require('inherits');
+    var assert = require('assert');
+
+    describe('inherits()', function () {
+      function Parent() {}
+      function Child() {
+        Parent.call(this);
+      }
+
+      inherits(Child, Parent);
+
+      var c = new Child();
+
+      it('should works', function() {
+        assert(c.constructor === Child);
+        assert(Object.getPrototypeOf(c) === Child.prototype);
+        assert(Object.getPrototypeOf(Object.getPrototypeOf(c)) === Parent.prototype);
+        assert(c instanceof Child);
+        assert(c instanceof Parent);
+        assert(Child.__super__ === Parent.prototype);
+      });
+    });
+  </script>
+
+  <script>
+    if (window.mochaPhantomJS) mochaPhantomJS.run()
+    else mocha.run();
+  </script>
+</body>
+</html>

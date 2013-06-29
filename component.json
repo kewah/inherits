@@ -7,8 +7,11 @@
   "dependencies": {},
   "development": {},
   "license": "WTFPL2",
-  "main": "inherits_browser.js",
+  "main": "index.js",
   "scripts": [
-    "inherits_browser.js"
-  ]
+    "index.js"
+  ],
+  "development": {
+    "component/assert": "*"
+  }
 }
