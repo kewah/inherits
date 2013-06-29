@@ -8,7 +8,13 @@
 
 ## API
 
+    function Child() {
+      Parent.call(this);
+    }
 
+    function Parent() {}
+
+    inherits(Child, Parent);
 
 ## License
 
